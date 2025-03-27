@@ -21,7 +21,7 @@ public class CoffeeOrderUtil {
                            .setId(UUID.randomUUID())
                           .setName("Kiran Kumar K")
                           //.setNickName("DS")
-                          // .setFullName("Dilip Sundarraj")
+                          // .setFullName("Kiran Kumar Kalavakuri")
                           .setStore(generateStore())
                           .setOrderLineItems(generateOrderLineItems())
                            .setOrderedTime(Instant.now())
