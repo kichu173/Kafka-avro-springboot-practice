@@ -20,6 +20,11 @@
             <name>Confluent</name>
             <url>https://packages.confluent.io/maven/</url>
         </repository>
+        <repository>
+            <id>example-repo</id>
+            <name>Local Repo</name>
+            <url>file:///C:/Users/kk000000/.m2</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -27,10 +32,10 @@
         <dependency><!-- This is a schemas module dependency (multimodule project)-->
             <groupId>com.learnavro</groupId>
             <artifactId>schemas</artifactId>
-            <!--    <version>3.0</version>-->
-            <version>1.0-SNAPSHOT</version>
+<!--            <version>1.0-SNAPSHOT</version>-->
+<!--            <version>1.0</version>-->
+                <version>3.0</version>
         </dependency>
-
 
         <dependency><!-- This dependency is needed in order to generate avro files, avro source code files from the schema files  -->
             <groupId>org.apache.avro</groupId>

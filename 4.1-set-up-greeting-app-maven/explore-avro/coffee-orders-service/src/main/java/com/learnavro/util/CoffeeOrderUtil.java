@@ -12,13 +12,14 @@ import java.util.UUID;
 public class CoffeeOrderUtil {
 
     public static CoffeeOrder buildNewCoffeeOrder(){
-//        var orderId=   OrderId.newBuilder()
-//                              .setId(randomId())
-//                              .build();
+        var orderId=   OrderId.newBuilder()
+                              .setId(randomId())
+                              .build();
 
         return CoffeeOrder.newBuilder()
 //                          .setId(randomId())
                            .setId(UUID.randomUUID())
+//                            .setId(orderId)
                           .setName("Kiran Kumar K")
                           //.setNickName("DS")
                           // .setFullName("Kiran Kumar Kalavakuri")
@@ -26,8 +27,8 @@ public class CoffeeOrderUtil {
                           .setOrderLineItems(generateOrderLineItems())
                            .setOrderedTime(Instant.now())
                            .setOrderedDate(LocalDate.now())
-                          //.setPickUp(PickUp.IN_STORE)
-                          //.setPickUpType(PickUp.IN_STORE)
+//                          .setPickUp(PickUp.IN_STORE)
+                          .setPickUpType(PickUp.IN_STORE)
                           .setStatus("NEW")
                           .build();
 

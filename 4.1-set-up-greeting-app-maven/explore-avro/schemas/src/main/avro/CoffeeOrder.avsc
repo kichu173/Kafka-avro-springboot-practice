@@ -14,6 +14,10 @@
                 "logicalType": "uuid"
             }
         },
+//        {
+//            "name": "id",
+//            "type": "OrderId"
+//        },
         {
             "name": "name",
             "type": "string"
@@ -25,7 +29,7 @@
             "doc": "Optional Field represents the nick name of the user"
         },
         {
-            "name": "store",
+            "name": "store", //** commented out to check backward compatibility
             "type": "Store"
         },
         {
@@ -37,6 +41,17 @@
                     "type": "OrderLineItem"
                 }
             }
+        },
+        {
+          "name": "pick_up_type",// IN_STORE, CURBSIDE
+          "type": {
+            "type": "enum",
+            "name": "PickUp",
+            "symbols": [
+              "IN_STORE",
+              "CURBSIDE"
+            ]
+          }
         },
         {
             "name": "ordered_time",
